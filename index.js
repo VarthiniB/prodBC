@@ -24,7 +24,7 @@ workbook.xlsx.readFile('env.xlsx')
                var rowS5 = worksheet5.getRow(q);
                rowS5.getCell(wfor).value = 0;
 
-
+                //comparing years of experience
                let flag1cell = flagrow1.getCell(2);
                let flag2cell = flagrow2.getCell(2);
              
@@ -34,7 +34,7 @@ workbook.xlsx.readFile('env.xlsx')
                else{
                    rowS5.getCell(wfor).value = 0;
                } 
-             
+             //comparing degree
              let flag1cellDeg1 = flagrow1.getCell(4);
                let flag2cellDeg2 = flagrow2.getCell(4);
 
@@ -49,7 +49,7 @@ workbook.xlsx.readFile('env.xlsx')
                         rowS5.getCell(wfor).value =  rowS5.getCell(wfor).value + 2;
                     }
                } 
-               
+               //comparing industry
                let flag1cellIndus1 = flagrow1.getCell(9)+ '';
                let flag1cellIndus2 = flagrow2.getCell(9)+ '';
                 const Indus1 = flag1cellIndus1.split(';');
@@ -64,6 +64,7 @@ workbook.xlsx.readFile('env.xlsx')
                }               
                 rowS5.getCell(wfor).value =  rowS5.getCell(wfor).value + zI++;
 
+               //comparing environment
                let flag1cellEnv1 = flagrow1.getCell(10)+ '';
                let flag1cellEnv2 = flagrow2.getCell(10)+ '';
                 const Env1 = flag1cellEnv1.split(';');
@@ -78,6 +79,8 @@ workbook.xlsx.readFile('env.xlsx')
                }
                rowS5.getCell(wfor).value =  rowS5.getCell(wfor).value + zE++;
               
+               
+               //filtering location
                let flag1cellLoc1 = flagrow1.getCell(31)+ "";
                let flag2cellLoc2 = flagrow2.getCell(31)+ "";
                   // console.log("=============="+flag1cellLoc1);
@@ -102,6 +105,7 @@ workbook.xlsx.readFile('env.xlsx')
                rowS5.getCell(wfor).value =  z;
               }*/
 
+               //filtering timeof day
               let flag1cellTime1 = flagrow1.getCell(32)+ '';
               let flag2cellTime2 = flagrow2.getCell(32)+ '';
 
